@@ -9,11 +9,9 @@ public class CameraMove : MonoBehaviour
     [Header("----- Camera Mode -----")]
     [SerializeField] private Vector3 followZoom = new Vector3(0, 3, -3);
     [SerializeField] private Vector3 followInit = new Vector3(0, 5.5f, -4.1f);
-    [SerializeField] float sensitivity = 10f;
+    [SerializeField] float sensitivity = 100f;
 
     private CinemachineFollow follow;
-
-    private bool bZoom = false;
 
     private Vector2 scroll = Vector2.zero;
 
@@ -40,6 +38,7 @@ public class CameraMove : MonoBehaviour
 
     private void Zoom()
     {
+        // 스크롤 값 보간 필요
         float scrollY = scroll.y;
 
         if (scrollY > 0.1f)

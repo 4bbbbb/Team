@@ -50,7 +50,8 @@ public class PlayerMove : MonoBehaviour
 
     private void Reset()
     {
-
+        //footPos = this.transform.Find("Player_FootStep");
+        //Debug.Assert(footPos != null, "FootPos is null");
     }
 
     private Vector2 velocity;
